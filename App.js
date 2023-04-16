@@ -7,12 +7,13 @@ import Home from "./src/screens/home";
 import About from "./src/screens/about";
 import Contact from "./src/screens/contact";
 import Courses from "./src/screens/courses";
+import UserData from "./src/screens/userData";
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     // <View style={styles.container}>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Students">
         <Stack.Screen
           name="Home"
           component={Home}
@@ -31,6 +32,16 @@ export default function App() {
         <Stack.Screen
           name="Contact"
           component={Contact}
+          options={{
+            headerTitleStyle: {
+              fontSize: 25,
+            },
+            headerTitleAlign: "center",
+          }}
+        />
+        <Stack.Screen
+          name="Students"
+          component={UserData}
           options={{
             headerTitleStyle: {
               fontSize: 25,
